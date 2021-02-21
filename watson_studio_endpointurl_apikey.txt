@@ -1,0 +1,100 @@
+Speech to Text-fl:
+
+API key:
+EXV98055ntz7-kaW2TUAcvhLbTl8UGEJvPcYFIu4Wd-x
+
+URL:
+https://api.eu-gb.speech-to-text.watson.cloud.ibm.com/instances/bb5a5439-cc79-41ba-b9c7-caee7bb6247d
+
+
+
+Language Translator-cy:
+
+API key:
+sWW6GxcAZRVyskHt2sGn8b2DmaxWuim2_mZ0OTuv3r77
+
+URL:
+https://api.eu-gb.language-translator.watson.cloud.ibm.com/instances/83ecb2e0-229a-4639-9675-aee999b9a1c8
+
+____________________________________________________________________________________________
+
+IBM_db credentials:
+
+{
+  "db": "BLUDB",
+  "dsn": "DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net;PORT=50000;PROTOCOL=TCPIP;UID=jfl06720;PWD=47572x@k9g6lrq5v;",
+  "host": "dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net",
+  "hostname": "dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net",
+  "https_url": "https://dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net:8443",
+  "jdbcurl": "jdbc:db2://dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net:50000/BLUDB",
+  "parameters": {},
+  "password": "47572x@k9g6lrq5v",
+  "port": 50000,
+  "ssldsn": "DATABASE=BLUDB;HOSTNAME=dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net;PORT=50001;PROTOCOL=TCPIP;UID=jfl06720;PWD=47572x@k9g6lrq5v;Security=SSL;",
+  "ssljdbcurl": "jdbc:db2://dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net:50001/BLUDB:sslConnection=true;",
+  "uri": "db2://jfl06720:47572x%40k9g6lrq5v@dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net:50000/BLUDB",
+  "username": "jfl06720"
+}
+
+
+#Replace the placeholder values with your actual Db2 hostname, username, and password:
+dsn_hostname = "dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net" # e.g.: "dashdb-txn-sbox-yp-dal09-04.services.dal.bluemix.net"
+dsn_uid = "jfl06720"        # e.g. "abc12345"
+dsn_pwd = "47572x@k9g6lrq5v"      # e.g. "7dBZ3wWt9XN6$o0J"
+
+dsn_driver = "{IBM DB2 ODBC DRIVER}"
+dsn_database = "BLUDB"            # e.g. "BLUDB"
+dsn_port = "50000"                # e.g. "50000" 
+dsn_protocol = "TCPIP"            # i.e. "TCPIP"
+
+__________________________________________________________________________________________________
+
+sql magic:
+%load_ext sql
+%sql ibm_db_sa://jfl06720:47572x%40k9g6lrq5v@dashdb-txn-sbox-yp-lon02-02.services.eu-gb.bluemix.net:50000/BLUDB
+
+__________________________________________________________________________________________________
+foursquare.com api cred
+
+CLIENT ID
+4JK4TLSKPCBG3A4UGFOCLGMY4AH0WW3RAXJKXPF5XRKPKMJ3
+
+CLIENT SECRET
+ARBBD03PGFCEY0TXMN45ZMEAIJ1QNZSZYNOFZ25MNC2TGCP4
+
+CODE
+EOLCY1TCJ3UZWHV4ASDPP24RKA3NQ5Q0NKXE1FK4VGCERBPN#_=_
+
+ACCESS TOKEN
+TXW53PPKEYED1VEQV3TOBGYULVNEFW233BFMX3TSK11XSD2J
+__________________________________________________________________________________________________
+
+Example urls for foursquare api:
+
+1. Search for a specific venue category:
+url = 'https://api.foursquare.com/v2/venues/search?client_id={}&client_secret={}&ll={},{}&v={}&query={}&radius={}&limit={}'.format(CLIENT_ID, CLIENT_SECRET, latitude, longitude, VERSION, search_query, radius, LIMIT)
+
+2. Explore a given venue:
+url = 'https://api.foursquare.com/v2/venues/{}?client_id={}&client_secret={}&v={}'.format(venue_id, CLIENT_ID, CLIENT_SECRET, VERSION)
+
+3. Get the venues tips:
+url = 'https://api.foursquare.com/v2/venues/{}/tips?client_id={}&client_secret={}&v={}&limit={}'.format(venue_id, CLIENT_ID, CLIENT_SECRET, VERSION, limit)
+
+4. Search for foursquare user:
+url = 'https://api.foursquare.com/v2/users/{}?client_id={}&client_secret={}&oauth_token={}&v={}'.format(user_id, CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN, VERSION)
+
+5. Explore a location:
+url = 'https://api.foursquare.com/v2/venues/explore?client_id={}&client_secret={}&ll={},{}&v={}&radius={}&limit={}'.format(CLIENT_ID, CLIENT_SECRET, latitude, longitude, VERSION, radius, LIMIT)
+
+6. Explore trending venues:
+url = 'https://api.foursquare.com/v2/venues/trending?client_id={}&client_secret={}&ll={},{}&v={}'.format(CLIENT_ID, CLIENT_SECRET, latitude, longitude, VERSION)
+
+__________________________________________________________________________________________________
+
+
+
+
+
+
+
+
