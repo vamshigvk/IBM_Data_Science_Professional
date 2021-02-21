@@ -1,0 +1,26 @@
+1. Scientific computing libraries:
+	- Pandas : For data structures and tools 
+	- Numpy  : For arrays and Matrices
+	- Scipy  : For Integrals, solving differential equations, optimization
+
+2. Visualization libraries:
+	- Matplotlib : Plots and graphs, most popular
+	- Seaborn    : Advanced plots like heat maps, time series, violin graphs
+
+3. Algorithmic libraries:
+	- Scikit-learn : tools statistical modeling for Machine learning including regression,classification, clustering and etc.
+			(This library is built on Numpy, Scipy and Matplotlib) 
+	- Statsmodels  : Explore data, estimate statistical models and perform statistical tests. 
+
+___________________________________________________________________________________________________________
+
+Pandas methods:
+
+import pandas as pd
+df=pd.read_csv(url)
+
+df.dtypes # to get datatype of each column
+df.describe() # to get a statistical summary of each column like mean , median etc and to find outliers
+df.describt(include="all") # to summarize integer columns and object typed columns as well (string columns)
+df.info() # to get top 30 and bottom 30 rows only
+
